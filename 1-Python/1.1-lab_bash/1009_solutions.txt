@@ -1,0 +1,75 @@
+## Ejercicios
+
+* Imprime en consola `Hello World`.
+    echo 'Hello World'
+
+* Crea un directorio nuevo llamado `new_dir`.
+    mkdir new_dir
+
+* Elimina ese directorio.
+    rmdir new_dir
+
+* Copia el archivo `sed.txt` dentro de la carpeta lorem a la carpeta lorem-copy. TIP: Puede ser necesario crear la carpeta lorem-copy primero. 
+    mkdir lorem-copy
+    cd lorem
+    cp sed.txt C:\Users\Mjp\Documents\IronhackLocal\1.1-lab_bash\lorem-copy
+
+* Muestra el contenido del archivo `sed.txt` dentro de la carpeta lorem. 
+   cat set.txt 
+
+* Muestra el contenido de los archivos `at.txt` y `lorem.txt` dentro de la carpeta lorem. 
+    cat at.txt, lorem.txt
+
+* Visualiza las primeras 3 líneas del archivo `sed.txt` dentro de la carpeta lorem-copy 
+    gc -TotalCount 3 sed.txt 
+
+* Añade `Homo homini lupus.` al final de archivo `sed.txt` dentro de la carpeta lorem-copy. 
+    echo  "Homo homini lupus." >> sed.txt    
+
+* Visualiza las últimas 3 líneas del archivo `sed.txt` dentro de la carpeta lorem-copy. Deberías ver ahora `Homo homini lupus.`.
+    Get-Content -Tail 3 sed.txt
+
+* Encuentra al usuario activo en el sistema.
+    whoami
+
+* Encuentra dónde estás en tu sistema de ficheros.
+    pwd
+
+* Lista los archivos que terminan por `.txt` en la carpeta lorem.
+    Get-ChildItem -Path .\ -Filter *.txt
+
+* Cuenta el número de líneas que tiene el archivo `sed.txt` dentro de la carpeta lorem. 
+    type sed.txt | Measure-Object -line
+
+* Cuenta el número de **archivos** que empiezan por `lorem` que están en este directorio y en directorios internos.
+    dir /b lorem* | find /v /c "" 
+
+
+* Cuenta el número de apariciones del string `et` en `at.txt` dentro de la carpeta lorem. 
+   (Get-Content at.txt | Select-String -Pattern "et" -AllMatches).Matches.Count
+
+
+## Ficheros bash
+
+Cualquier comando o comandos de bash se pueden almacenar en un fichero y ejecutar cuando queramos. 
+Obviamente puedes utilizar tu editor preferido. Creamos el fichero: 
+```
+$ touch list_files.sh
+ni list_files.sh
+```
+
+E incluimos el contenido que queramos. En este caso listar ficheros:
+```bash
+#!/bin/bash
+ls
+```
+
+Ejecutamos el script:
+```
+$ bash list_files.sh
+```
+
+Y veremos por consola el siguiente output. 
+```console
+README.md lorem solutions.ipynb
+```

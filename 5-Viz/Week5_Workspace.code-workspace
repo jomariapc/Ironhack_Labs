@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "5.1-lab_subsetting_and_descriptive_stats"
+		},
+		{
+			"path": "5.1-lab_pivot_table_and_correlation"
+		},
+		{
+			"path": "5.2-lab_matplotlib_seaborn"
+		},
+		{
+			"path": "5.2-lab_interactive_visualization"
+		},
+		{
+			"path": "5.3-lab_tableau_data_visualization"
+		}
+	],
+	"settings": {}
+}
